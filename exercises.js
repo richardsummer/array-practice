@@ -1,16 +1,21 @@
 // ---------------------
-// Define a function that takes a string and an integer of i and creates a new array of length i where each value is equal to the string passed in
+// Define a function that takes a string and an integer of i and creates
+// a new array of length i where each value is equal to the string passed in
 // myFunction('sunshine', 3) => ['sunshine', 'sunshine', 'sunshine'];
 // ---------------------
 
 // Put your answer below -------------------------
 
+function myFunction(word, integer){
+  const myArray = []
+  for(let i = 0; i < integer; i++){
+    myArray.push(word);
+  }
+  return myArray;
 
+}
 
-
-
-
-
+console.log(myFunction('sunshine', 3));
 
 
 
@@ -23,11 +28,10 @@
 
 // Put your answer below -------------------------
 
+const myArray = ['1', '2', '3'];
 
-
-
-
-
+const newArray = [...myArray].reverse(myArray);
+  console.log(newArray);
 
 
 
@@ -40,12 +44,19 @@
 
 // Put your answer below -------------------------
 
+const arr7 = [1, '', 0]
 
+function noFalsy(arr){
+  let result = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i]){
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
 
-
-
-
-
+console.log(noFalsy(arr7));
 
 
 
@@ -59,12 +70,14 @@
 
 // Put your answer below -------------------------
 
+const list = [['name', 'Charlie'], ['color', 'brown'], ['age', 10]];
 
+function func2(arr){
+  obj = Object.fromEntries(arr);
+  return obj;
+}
 
-
-
-
-
+console.log(func2(list));
 
 
 
@@ -77,8 +90,9 @@
 
 // Put your answer below -------------------------
 
-
-
+const numberArray = [1,2,3,4,5,4,3];
+ let dup = [...new Set(numberArray)];
+ console.log(dup);
 
 
 
@@ -97,10 +111,27 @@
 // ---------------------
 
 // Put your answer below -------------------------
+const arr1 = [1, 2, 3, 4]
+const arr2 = [1, 2, 3, 4, 5]
 
 
+function func3(arr1, arr2){
+  if(arr1.length !== arr2.length){
+    return false;
+  }
+    arr1 = arr1.sort((a, b) => a - b);
+    arr2 = arr2.sort((a, b) => a - b);
+    for(let i = 0; i < arr1.length; i++){
+      if(arr1[i] !==arr2[i]){
+        return false;
+        console.log('false');
+      }
+    }
+    return true;
+    console.log('true');
+}
 
-
+console.log(func3(arr1, arr2));
 
 
 
